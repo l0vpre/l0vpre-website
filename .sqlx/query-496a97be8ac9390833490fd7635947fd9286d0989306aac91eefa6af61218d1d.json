@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": " DELETE FROM commissions WHERE id = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "496a97be8ac9390833490fd7635947fd9286d0989306aac91eefa6af61218d1d"
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Example HTML file with commissions">
+    <title>Example HTML File</title>
+</head>
+<body>
+    <h1>Commissions</h1> 
+    <table>
+        {% for commission in commissions %}
+            <tr>
+                <td>{{ commission.id }}</td>
+                <td>{{ commission.title }}</td>
+                <td>{{ commission.contact }}</td>
+                <td>{{ commission.description }}</td>
+                <td>{{ commission.status }}</td>
+                <td>
+                    <form action="/commissions/delete/{{ commission.id }}" method="POST">
+                        <input type="submit" value="X">
+                    </form>    
+                </td>
+            </tr>
+        {% endfor %} 
+    </table>
+        <form method="get" action="/commissions/new">
+            <button type="submit">New commission</button>
+        </form>
+        
+    <p>This document mentions commissions.</p>
+</body>
+</html>
