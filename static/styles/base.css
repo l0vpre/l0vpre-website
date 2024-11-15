@@ -1,0 +1,49 @@
+:root {
+    --bg-color: #171619;
+    --bg-nav-color: #000000;
+    --text-color: #e7e0fc;
+}
+
+html {
+    background-color: var(--bg-color);
+    font-family: "Lucida Console", monospace;
+    color: #ffffff
+}
+
+nav {
+    background-image: linear-gradient(var(--bg-nav-color), #131319 77%, var(--bg-color));
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: right;
+}
+
+nav li a {
+    display: block;
+    color: var(--text-color);
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    background-color: #c588f799;
+    //color: #000000;
+    border-radius: 20px;
+}
+
+nav li a.active {
+    background-color: #c588f7; /* Цвет фона для активной вкладки */
+    color: #000000; /* Цвет текста для активной вкладки */
+    border-radius: 20px; /* Радиус границ для активной вкладки */
+}
+
+
+

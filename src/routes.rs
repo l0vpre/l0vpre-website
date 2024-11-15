@@ -4,11 +4,15 @@ use tracing::error;
 use crate::app::AppState;
 use crate::db::{get_commissions, insert_commission, delete_commission_by_id, CommissionInsertData};
 use crate::schemas::NewCommissionForm;
-use crate::templates::{CommissionTemplate, CommissionNewTemplate};
+use crate::templates::{IndexTemplate, CommissionTemplate, CommissionNewTemplate};
 
 
 pub mod get {
     use super::*;
+
+    pub async fn index() -> IndexTemplate {
+        IndexTemplate{}
+    }
 
     pub async fn commissions(State(state): State<AppState>) -> CommissionTemplate {
         let commissions = get_commissions(&state.pool).await.unwrap_or_default();

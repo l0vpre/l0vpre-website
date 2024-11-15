@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Example HTML file with commissions">
-    <title>Example HTML File</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
     <h1>Make commissions</h1>
     <table> 
         <form action= "/commissions/new" method="POST">
@@ -19,6 +13,4 @@
             <input type="submit" value="Submit">
         </form>
     </table>
-    <p>This document mentions commissions.</p>
-</body>
-</html>
+{% endblock %}

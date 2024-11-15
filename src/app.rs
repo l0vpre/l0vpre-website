@@ -1,5 +1,6 @@
-use axum::{Router, routing::{get, post}, response::Html};
+use axum::{Router, routing::{get, post}};
 use crate::routes;
+use tower_http::services::ServeDir;
 
 #[derive(Clone)]
 pub struct AppState{
@@ -8,10 +9,11 @@ pub struct AppState{
 
 pub fn router(state: AppState) -> Router {
     Router::new()
-        .route("/",get(|| async {Html::from("<h1>Welcome to My Page!</h1>")}))
+        .route("/",get(routes::get::index))
         .route("/commissions",get(routes::get::commissions))
         .route("/commissions/new", post(routes::post::commission_new))
         .route("/commissions/new", get(routes::get::commission_new))
         .route("/commissions/delete/:id", post(routes::post::commissions_delete))
         .with_state(state)
+        .fallback_service(ServeDir::new("static"))
 }

@@ -14,8 +14,8 @@ pub struct  CommissionNewTemplate{
 }
 
 #[derive(Template)]
-#[template(path = "commissions_delete.html")]
-pub struct  CommissionDeleteTemplate{
+#[template(path = "index.html")]
+pub struct  IndexTemplate{
 }
 
 
