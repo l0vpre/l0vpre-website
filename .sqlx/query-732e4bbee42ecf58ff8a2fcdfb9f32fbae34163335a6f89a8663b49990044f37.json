@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO portfolio_images(\n                    item_id,\n                    path\n                )\n                VALUES(?, ?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "732e4bbee42ecf58ff8a2fcdfb9f32fbae34163335a6f89a8663b49990044f37"
+}

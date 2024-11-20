@@ -1,10 +1,13 @@
-mod db;
-mod templates;
-mod routes;
-mod app;
-mod schemas;
-mod settings;
+pub mod app;
+pub mod db;
+pub mod model;
+pub mod routes;
+pub mod schemas;
+pub mod settings;
+pub mod templates;
 
+use app::AppState;
+use db::CommissionRepository;
 use tracing::info;
 use tokio::net::TcpListener;
 use settings::Settings;
@@ -13,10 +16,17 @@ use settings::Settings;
 async fn main() -> Result<(), anyhow::Error>{
     tracing_subscriber::fmt::init();
     let settings = Settings::new()?;
-    let app_state = app::AppState{ pool: db::get_sqlite_pool().await?};
-    let router = app::router(app_state);
+
+    let pool = db::get_sqlite_pool().await?;
+    let commissions = CommissionRepository::new(pool.clone());
+
+    let state = AppState { commissions };
+    let router = app::router(state);
+
     let listener = TcpListener::bind((settings.host, settings.port)).await?;
     info!("{}",listener.local_addr()?);
+
     axum::serve(listener,router).await?;
+
     Ok(())
 }

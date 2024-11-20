@@ -1,0 +1,20 @@
+{
+  "db_name": "SQLite",
+  "query": "\n                INSERT INTO portfolio_items(\n                    category_id,\n                    title\n                )\n                VALUES (?, ?)\n                RETURNING id",
+  "describe": {
+    "columns": [
+      {
+        "name": "id",
+        "ordinal": 0,
+        "type_info": "Integer"
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "08fbd19e95b678469e5291784ee5e5154eb9dcae31c6270f1d90b62b67f8efcb"
+}

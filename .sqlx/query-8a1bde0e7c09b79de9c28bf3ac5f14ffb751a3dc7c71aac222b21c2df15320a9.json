@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "\n                INSERT INTO commissions(\n                    title,\n                    contact,\n                    description,\n                    status\n                )\n                VALUES (?, ?, ?, ?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "8a1bde0e7c09b79de9c28bf3ac5f14ffb751a3dc7c71aac222b21c2df15320a9"
+}

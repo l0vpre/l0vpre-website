@@ -1,0 +1,32 @@
+{
+  "db_name": "SQLite",
+  "query": "\n            select\n                id,\n                category_id as \"category: _\",\n                title\n            from\n                portfolio_items\n            ",
+  "describe": {
+    "columns": [
+      {
+        "name": "id",
+        "ordinal": 0,
+        "type_info": "Integer"
+      },
+      {
+        "name": "category: _",
+        "ordinal": 1,
+        "type_info": "Integer"
+      },
+      {
+        "name": "title",
+        "ordinal": 2,
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "2804a41db9ea4dde38c5dadb39989d4eb50ba7b9283a6080f7ad7d12a5bc61ef"
+}

@@ -1,36 +1,30 @@
-:root {
-    --bg-color: #212023;
-    --bg-nav-color: #000000;
-    --text-color: #e7e0fc;
+h1 {
+    text-align: center;
+    font-size: 70px;
+    margin-bottom: 10px;
+    padding-top: 20px;
 }
 
-html {
-    background-color: var(--bg-color);
-    font-family: "Lucida Console", monospace;
-    color: #ffffff
-}
-
-nav {
-    background-image: linear-gradient(var(--bg-nav-color), #131214 77%, var(--bg-color));
-}
-
-nav ul {
+div ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    text-align: center;
 }
 
-nav li {
-    float: right;
+div li {
+    display: inline-block;
+    margin: 0px 40px;
 }
 
-nav li a {
+div li a {
     display: block;
     color: var(--text-color);
     text-align: center;
     padding: 15px 20px;
     text-decoration: none;
+    font-size: 20px;
 }
 
 a:hover, a:active {
@@ -38,11 +32,8 @@ a:hover, a:active {
     border-radius: 20px;
 }
 
-nav li a.active {
+div li a.active {
     background-color: #c588f7; /* Цвет фона для активной вкладки */
     color: #000000; /* Цвет текста для активной вкладки */
     border-radius: 20px; /* Радиус границ для активной вкладки */
 }
-
-
-

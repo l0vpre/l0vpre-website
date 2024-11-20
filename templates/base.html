@@ -4,23 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/base.css" />
+    <script type="module" src="/scripts/animation.js"></script>
+    {% block head %}{% endblock %}
 </head>
 <body>
     <nav id="navigation">
-      <ul>        
+      <ul>
         <li><a href="/blogs"> Blogs </a></li>
-        <li><a href="/os"> OC </a></li>
+        <li><a href="/oc"> OC </a></li>
         <li><a href="/portfolio"> Portfolio </a></li>
         <li><a href="/commissions"> Commissions </a></li>
         <li><a href="/"> Home </a></li>
       </ul>
-    </nav>        
-
-    {% block content %}
-    {% endblock %}
-
-    </script><script src="/styles/animation.js"></script>
-    
+    </nav>
+    {% block content %}{% endblock %}
 </body>
 </html>
 

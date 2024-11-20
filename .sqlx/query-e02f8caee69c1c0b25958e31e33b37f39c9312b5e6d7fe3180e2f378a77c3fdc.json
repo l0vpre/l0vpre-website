@@ -1,0 +1,20 @@
+{
+  "db_name": "SQLite",
+  "query": "\n                select\n                    path\n                from\n                    portfolio_images\n                where\n                    item_id = ?\n            ",
+  "describe": {
+    "columns": [
+      {
+        "name": "path",
+        "ordinal": 0,
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "e02f8caee69c1c0b25958e31e33b37f39c9312b5e6d7fe3180e2f378a77c3fdc"
+}
